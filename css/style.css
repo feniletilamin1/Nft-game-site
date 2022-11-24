@@ -1,0 +1,1640 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/Rubik-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('../fonts/Rubik-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Furore';
+    src: url('../fonts/Furore.otf');
+    font-weight: 400;
+}
+
+.body-fixed {
+    overflow: hidden;
+}
+
+.video {
+    overflow: auto;
+}
+
+.video, .black-bg{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background-color: #000000c4;
+}
+
+.video__wrapper{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+  
+.video__wrapper iframe {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 70%;
+    border-width: 0;
+    outline-width: 0;
+}
+
+.black-bg--active {
+    display: block;
+}
+
+.header {
+    position: relative;
+    padding-top: 64px;
+    padding-bottom: 107px;
+    background: url('../backgrounds/header-bg.jpg') no-repeat center center/cover;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1297px;
+}
+
+.header__wrapper {
+    margin-bottom: 71px;
+}
+
+.header__menu {
+    padding: 0 235px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: auto;
+}
+
+.header__menu-list {
+    display: flex;
+}
+
+.header__menu-list-item {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.header__link {
+    transition: color .5s ease;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.header__menu-list-item:hover .header__link{
+    color: #FFFFFF;
+}
+
+.header__logo {
+    width: 84px;
+    height: 39px;
+}
+
+.header__menu-list-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.header__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__title {
+    font-family: 'Furore';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 92px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.linear-text {
+    background-image: linear-gradient(90deg, #CD72EB 10%, rgba(19, 3, 147, 0) 100%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.header__desc {
+    display: block;
+    margin-top: 15px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 160%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.cars-photo-slider__scroll-bar {
+    display: none !important;
+    height: 1px !important;
+}
+
+
+.cars-photo-slider__scroll-bar .swiper-scrollbar-drag {
+    background: #F522FF;
+}
+
+.button-buy-game {
+    margin-top: 75px;
+    padding: 25px 108px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 160%;
+    color: #FFFFFF;
+    background: linear-gradient(95.79deg, #F98CFF 12.06%, #130393 86.01%);
+    border-radius: 1000px;
+}
+
+.header__cars {
+    overflow: hidden;
+    position: relative;
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    align-items: top;
+}
+
+.header__car-card {
+    position: relative;
+}
+
+.header__cars-car-image {
+    position: absolute;
+    top: 30px;
+    width: 445px;
+    height: 338px;
+}
+
+.header__cars-car-image--left {
+    left: -41px;
+}
+
+.header__cars-car-image--right {
+    right: -51px;
+}
+
+.car-card {
+    margin-left: 20px;
+    width: 280px;
+    height: 430px;
+    background: rgba(249, 140, 255, 0.15);
+    backdrop-filter: blur(12.5px);
+    border: 2px solid;
+    border-image-source: linear-gradient(344.16deg, rgba(249, 140, 255, 0.4) 0.45%, rgba(139, 39, 186, 0.4) 94.36%);
+    border-style: solid;
+    border-image-slice: 1;
+}
+
+.car-card--left {
+    transform: skew(23deg, 0deg);
+}
+
+.car-card--right {
+    transform: skew(-23deg, 0deg);
+    margin-right: 10px;
+}
+
+.about-the-game {
+    padding-top: 50px;
+    padding-bottom: 120px;
+    background: url('../backgrounds/section-bg1.jpg') no-repeat top center/cover;
+}
+
+.about-the-game__wrapper {
+    display: flex;
+    position: relative;
+    margin-bottom: 300px;
+}
+
+.about-the-game__video {
+   position: relative;
+}
+
+.about-the-game__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-the-game__title {
+    margin-top: 50px;
+    font-family: 'Furore';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 68px;
+    line-height: 78px;
+    color: #FFFFFF;
+}
+
+.about-the-game__features-list {
+    margin-top: 40px;
+}
+
+.about-the-game__features-list-item {
+    position: relative;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 160%;
+    color: #FFFFFF;
+    padding-left: 22px;
+}
+
+.about-the-game__features-list-item:before {
+    position: absolute;
+    left: 0;
+    top: 16px;
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+.about-the-game__features-list-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.about-the-game__video-image {
+    width: 598px;
+    height: 542px;
+}
+
+.game-video-btn {
+    position: absolute;
+    right: 55px;
+    bottom: -30px;
+    cursor: pointer;
+    font-family: 'Furore';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #FFFFFF;
+    width: 155px;
+    height: 155px;
+    background: 
+    linear-gradient(rgb(9,6,37) 0 0) padding-box, /*this is your grey background*/
+    linear-gradient(95.79deg, #F98CFF 12.06%, #130393 86.01%) border-box;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 1000px;
+    display: inline-block;
+    margin: 75px 0;
+}
+
+.about-the-game__play-icon {
+    margin: 0 auto;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 25px;
+}
+
+.partners {
+    padding-top: 144px;
+    padding-bottom: 169px;
+    background-color: #010002;
+}
+
+.partners__bg {
+    padding: 10px;
+    border: 2px solid transparent;
+    width: 100%;
+    padding: 80px 0;
+    border-radius: 20px;
+    background: 
+    url('../backgrounds/Partners.jpg') no-repeat top center/cover padding-box, /*this is your grey background*/
+    linear-gradient(95.79deg, #F98CFF 12.06%, #130393 86.01%) border-box;
+}
+
+.partners__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.statistics__wrapper {
+    position: relative;
+}
+
+.section-title {
+    font-family: 'Furore';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 55px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.about-the-game__section-title {
+    margin-bottom: 60px;
+}
+
+.partners__cards-wrapper {
+    display: flex;
+    margin-top: 40px;
+}
+
+.partner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner:not(:last-child) {
+    margin-right: 60px;
+}
+
+.partner__image {
+    width: 125px;
+    height: 125px;
+}
+
+.partner__name {
+    margin-top: 15px;
+    font-family: 'Furore';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 160%;
+    color: #FFFFFF;
+}
+
+
+.footer {
+    padding: 140px 0;
+    background: url('../backgrounds/footer-bg.jpg') no-repeat top center/cover;
+}
+
+.footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__links-wrapper {
+    display: flex;
+}
+
+.footer__link {
+    font-family: 'Furore';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 160%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.footer__link:not(:last-child) {
+    margin-right: 40px;
+}
+
+.footer__desc {
+    margin-top: 40px;
+    max-width: 984px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.animate__animated.animate__fadeInLeft, .animate__animated.animate__fadeInRight {
+    --animate-duration: 1.5s;
+}
+
+.car-photo-card {
+    height: 390px;
+    width: 366px;
+    border-radius: 20px;
+    background: url('../backgrounds/photo-car-card-bg1.jpg') no-repeat top center/cover;
+}
+
+.car-photo-card__wrapper {
+    position: relative;
+    padding: 50px 45px 0 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.car-photo-card__image {
+    height: 273px;
+    width: 275px;
+}
+
+.car-photo-card__info {
+    width: 305px;
+    padding: 34px 25px 17px 25px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    background: 
+    linear-gradient(rgb(9,6,37) 0 0) padding-box, /*this is your grey background*/
+    linear-gradient(95.79deg, #F98CFF 12.06%, #130393 86.01%) border-box;
+}
+
+.car-photo-card__name {
+    font-family: 'Furore';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #FFFFFF;
+}
+
+.car-photo-card__desc {
+    margin-top: 5px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.cars-photo-slider {
+    height: 590px !important;
+}
+
+.cars-photo-slider .swiper-slide-active {
+    padding-top: 100px !important;
+}
+
+.cars-photo-slider .swiper-slide {
+    transition: padding .5s ease;
+}
+
+.statistics {
+    position: relative;
+    background-color: #010002;
+}
+
+.statistics__bg {
+    height: auto;
+    width: 100%;
+}
+
+.statistics-info {
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.statistics-info--community {
+    top: 165px;
+    left: 135px;
+}
+
+.statistics-info--team {
+    top: 585px;
+    right: 335px;
+}
+
+.statistics-info__image {
+    margin-right: 30px;
+}
+
+.statistics-info__image--lamp {
+    height: 130px;
+    width: 76px;
+}
+
+.statistics-info__image--target {
+    width: 124px;
+    height: 110px;
+}
+
+.statistics-info--marketing {
+    top: 210px;
+    right: 70px;
+}
+
+.statistics-info__image--man {
+    height: 129px;
+    width: 95px;
+}
+
+.statistics-info__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.statistics-info__text-percents {
+    font-family: 'Furore';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 160%;
+    color: #FFFFFF;
+}
+
+.statistics-info__text-desc {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.statistics__text {
+    position: absolute;
+    top: 524px;
+    left: 150px;
+    max-width: 336px;
+}
+
+.statistics__text-title {
+    font-family: 'Furore';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.statistics__text-desc {
+    margin-top: 16px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.road-map {
+    padding-top: 80px;
+    padding-bottom: 140px;
+    background-color: #010002;
+}
+
+.road-map__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.road-map__bg {
+    height: 340px;
+    width: 882px;
+    margin-bottom: 232px;
+}
+
+.road-map__stage {
+    max-width: 255px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.road-map__stage--1 {
+    left: 0;
+    top: 95px;
+}
+
+.road-map__stage--2 {
+    left: 197px;
+    top: 261px;
+}
+
+.road-map__stage--3 {
+    left: 197px;
+    top: 261px;
+}
+
+.road-map__stage--3 {
+    left: 562px;
+    top: 364px;
+}
+
+.road-map__stage--4 {
+    right: 197px;
+    top: 261px;
+    text-align: right;
+}
+
+.road-map__stage--5 {
+    text-align: right;
+    right: 0;
+    top: 95px;
+}
+
+.road-map__stage-number {
+    font-family: 'Furore';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 160%;
+}
+
+.road-map__stage-number--first {
+    color: #EB85F8;
+}
+
+.road-map__stage-number--second {
+    color: #C46CE6;
+}
+
+.road-map__stage-number--third {
+    color: #B041EE;
+}
+
+.road-map__stage-number--fourth {
+    color: #4661C2;
+}
+
+.road-map__stage-number--fifth {
+    color: #2A5AB8;
+}
+
+.road-map__stage-name {
+    margin-top: 5px;
+    font-family: 'Furore';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 160%;
+    color: #FFFFFF;
+}
+
+.road-map__desc {
+    margin-top: 5px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.road-map__button-buy-game {
+    -webkit-box-shadow: 0px 5px 64px 80px rgba(199, 23, 210, 0.1);
+    -moz-box-shadow: 0px 5px 64px 80px rgba(199, 23, 210, 0.1);
+    box-shadow: 0px 5px 64px 80px rgba(199, 23, 210, 0.1);
+}
+
+.roadmap__section-title {
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header__burger {
+    display: none;
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    position: relative;
+}
+
+.header__burger-menu {
+    width: 42px;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    background-color: #FFFFFF;
+}
+
+.header__burger:after, .header__burger:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 42px;
+    height: 2px;
+    background-color: #FFFFFF;
+    left: 0;
+}
+
+.header__burger:before {
+    top: 0;
+}
+
+.header__burger:after {
+    bottom: 0;
+}
+
+.header__logo--mobile {
+    display: none;
+}
+
+.header__cross-menu {
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 65px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.header__cross-menu:hover .header__cross:after, .header__cross-menu:hover .header__cross:before {
+    background-color: #FFFFFF;
+}
+
+.header__cross:after, .header__cross:before {
+    transition: background-color .3s ease;
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    top: 13px;
+    left: 1px;
+}
+
+.header__cross:after {
+    transform: rotate(45deg);
+}
+
+.header__cross:before {
+    transform: rotate(-45deg);
+}
+
+.header__menu--active {
+    display: flex !important;
+}
+
+
+@media (max-width:1400px) {
+    .container {
+        max-width: 1050px;
+    }
+
+    .header__menu {
+        padding: 0 114px;
+    }
+
+    .car-card {
+        margin-left: 20px;
+        width: 240px;
+        height: 342px;
+    }
+
+    .header__cars-car-image {
+        width: 355px;
+        height: 248px;
+    }
+
+    .header__cars-car-image--left {
+        left: -31px;
+    }
+
+    .header__cars-car-image--right {
+        left: -44px;
+    }
+
+    .car-card--left {
+        transform: skew(25deg, 0deg);
+    }
+    
+    .car-card--right {
+        transform: skew(-25deg, 0deg);
+    }
+
+    .cars-photo-slider .swiper-slide-active {
+        padding-top: 0 !important;
+    }
+
+    .road-map__stage-number {
+        font-size: 28px;
+    }
+
+    .road-map__stage-name {
+        font-size: 22px;
+    }
+
+    .road-map__desc {
+        font-size: 14px;
+    }
+
+    .road-map__stage--1 {
+        top: 160px;
+    }
+
+    .road-map__stage--2 {
+        left: 197px;
+        top: 295px;
+    }
+
+    .road-map__stage--3 {
+        top: 364px;
+        left: 457px;
+    }
+
+    .road-map__stage--4 {
+        right: 197px;
+        top: 295px;
+    }
+
+    .road-map__stage--5 {
+        top: 160px;
+    }
+
+    .about-the-game__wrapper {
+        margin-bottom: 200px;
+    }
+
+    .statistics-info__text-percents {
+        font-size: 38px;
+    }
+
+    .statistics-info__text-desc {
+        font-size: 16px;
+    }
+
+    .statistics-info__image--lamp {
+        height: 110px;
+        width: 56px;
+    }
+
+    .statistics-info__image--target {
+        width: 114px;
+        height: 90px;
+    }
+
+    .statistics-info__image--man {
+        height: 109px;
+        width: 75px;
+    }
+
+    .statistics__text-title {
+        font-size: 22px;
+    }
+
+    .statistics__text-desc {
+        font-size: 14px;
+    }
+
+    .statistics__text {
+        max-width: 298px;
+    }
+
+    .statistics-info--community {
+        top: 120px;
+        left: 117px;
+    }
+
+    .statistics__text {
+        top: 364px;
+        left: 131px;
+        max-width: 225px;
+    }
+
+    .statistics-info--team {
+        top: 478px;
+        right: 276px;
+    }
+
+    .statistics-info--marketing {
+        top: 173px;
+        right: 49px;
+    }
+
+    .game-video-btn {
+        bottom: 106px;
+    }
+
+    .video__wrapper {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width:1199px) {
+    .container {
+        max-width: 920px;
+    }
+
+    .header__cars {
+        display: none;
+    }
+
+    .header {
+        padding-bottom: 700px;
+    }
+
+    .about-the-game__video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-the-game__video {
+        order: 2;
+        margin-top: 50px;
+    }
+
+    .about-the-game__info {
+        order: 1;
+    }
+
+    .button-buy-game {
+        order: 3;
+    }
+
+    .about-the-game__wrapper {
+        flex-direction: column;
+    }
+
+    .about-the-game__features-list {
+        padding-left: 30px;
+    }
+
+    .about-the-game__button-buy-game {
+        position: absolute;
+        left: 0;
+        top: 881px;
+    }
+
+    .about-the-game__wrapper {
+        margin-bottom: 270px;
+    }
+
+    .game-video-btn {
+        bottom: 17px;
+        right: 183px;
+    }
+
+    .road-map__bg {
+        top: 542px;
+        left: -379px;
+        position: absolute;
+        transform: rotate(270deg);
+        margin-bottom: 0;
+    }
+
+    .road-map {
+        padding-bottom: 1550px;
+    }
+
+    .road-map__button-buy-game {
+        position: absolute;
+        top: 1300px;
+        left: 0;
+    }
+
+    .road-map__stage-number {
+        font-size: 32px;
+    }
+
+    .road-map__stage-name {
+        font-size: 26px;
+    }
+
+    .road-map__desc {
+        font-size: 18px;
+    }
+
+    .road-map__stage {
+        max-width: 268px;
+    }
+
+    .road-map__stage--1 {
+        top: 218px;
+        left: 164px;
+    }
+
+    .road-map__stage--2 {
+        left: 316px;
+        top: 371px;
+    }
+
+    .road-map__stage--3 {
+        left: 344px;
+        top: 636px;
+    }
+
+    .road-map__stage--4 {
+        right: 0;
+        left: 316px;
+        top: 912px;
+        text-align: left;
+    }
+
+    .road-map__stage--5 {
+        right: 0;
+        left: 164px;
+        top: 1058px;
+        text-align: left;
+    }
+
+    .statistics__bg {
+        position: absolute;
+        top: 239px;
+        left: -383px;
+        transform: scale(1.5);
+    }
+    
+    .statistics {
+        padding-top: 50px;
+        padding-bottom: 678px;
+    }
+
+    .statistics__text {
+        display: flex;
+        flex-direction: column;
+        position: static;
+        max-width: 100%;
+    }
+
+    .statistics__text-title {
+        font-family: 'Furore';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 55px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    .statistics__text-desc {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .statistics-info--community {
+        top: 263px;
+        left: 279px;
+    }
+
+    .statistics-info--marketing {
+        top: 466px;
+        right: 336px;
+    }
+
+    .statistics-info--team {
+        top: 700px;
+        left: 279px;
+    }
+
+    .road-map__stage-number--fifth {
+        color: #EB85F8;
+    }
+    
+    .road-map__stage-number--fourth{
+        color: #C46CE6;
+    }
+    
+    .road-map__stage-number--third {
+        color: #B041EE;
+    }
+    
+    .road-map__stage-number--second {
+        color: #4661C2;
+    }
+    
+    .road-map__stage-number--first {
+        color: #2A5AB8;
+    }
+
+    .button-buy-game {
+        width: 100%;
+        text-align: center;
+    }
+
+    .video__wrapper {
+        margin-top: 80px;
+    }
+
+    .cars-photo-slider__scroll-bar {
+        display: block !important;
+    }
+}
+
+@media (max-width:991px) {
+    .container {
+        max-width: 730px;
+    }
+
+    .header__logo {
+        display: none;
+    }
+
+    .header__logo--mobile {
+        display: block;
+    }
+    
+    .header__menu-list {
+        flex-direction: column;
+    }
+
+    .header__menu {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+        position: fixed;
+        background: linear-gradient(21deg, #dd03e4, #200261);    
+        right: 0;
+        top: 0;
+        justify-content: flex-start;
+        height: 100vh;
+        z-index: 100;
+    }
+
+    .header__menu-list-item:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .header__menu-list-item {
+        margin-bottom: 40px;
+    }
+
+    .header__menu-list-item .header__link {
+        display: block;
+        padding: 20px 150px 20px 150px;
+        text-decoration: underline;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .header__burger {
+        display: block;
+    }
+
+    .header__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__menu-list:first-child {
+        margin-top: 135px;
+    }
+
+    .header__cross-menu {
+        display: block;
+    }
+
+    .statistics__bg {
+        position: absolute;
+        top: 205px;
+        left: -294px;
+        transform: scale(1.3);
+    }
+
+    .statistics {
+        padding-top: 50px;
+        padding-bottom: 537px;
+    }
+
+    .statistics-info__image--lamp {
+        height: 90px;
+        width: 45px;
+    }
+
+    .statistics-info__image--target {
+        width: 94px;
+        height: 70px;
+    }
+
+    .statistics-info__image--man {
+        height: 89px;
+        width: 55px;
+    }
+
+    .statistics-info__text-percents {
+        font-size: 30px;
+    }
+
+    .statistics-info__text-desc {
+        font-size: 12px;
+    }
+
+    .statistics-info--community {
+        top: 250px;
+        left: 185px;
+    }
+
+    .statistics-info--marketing {
+        top: 410px;
+        right: 288px;
+    }
+
+    .statistics-info--team {
+        top: 575px;
+        left: 185px;
+    }
+
+    .partners {
+        padding-top: 100px;
+        padding-bottom: 80px;
+    }
+
+    .about-the-game__button-buy-game {
+        top: 958px;
+    }
+
+    .video__wrapper {
+        margin-top: 110px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container{
+        max-width: 540px;
+    }
+
+    .about-the-game {
+        padding-bottom: 20px;
+    }
+
+    .game-video-btn {
+        bottom: 11px;
+        right: 33px;
+    }
+
+    .about-the-game__button-buy-game {
+        top: 1076px;
+    }
+
+    .about-the-game__video-image {
+        width: 558px;
+    }
+
+    .road-map {
+        padding-top: 20px;
+    }
+
+    .section-title {
+        font-size: 40px;
+    }
+
+    .statistics__text-title {
+        font-size: 40px;
+    }
+
+    .statistics__text-desc {
+        margin-top: 30px;
+    }
+
+    .statistics__bg {
+        left: -231px;
+    }
+
+    .statistics-info__image--lamp {
+        height: 70px;
+        width: 35px;
+    }
+
+    .statistics-info__image--target {
+        width: 74px;
+        height: 50px;
+    }
+
+    .statistics-info__image--man {
+        height: 79px;
+        width: 40px;
+    }
+
+    .statistics-info--community {
+        top: 231px;
+        left: 144px;
+    }
+
+    .statistics-info--marketing {
+        top: 339px;
+        right: 195px;
+    }
+
+    .statistics-info--team {
+        top: 471px;
+        left: 144px;
+    }
+
+    .statistics {
+        padding-bottom: 419px;
+    }
+
+    .partner__image {
+        width: 105px;
+        height: 105px;
+    }
+
+    .header__title {
+        font-size: 61px;
+    }
+
+    .about-the-game__title {
+        font-size: 52px;
+    }
+
+    .about-the-game__features-list-item {
+        font-size: 18px;
+    }
+
+    .video__wrapper {
+        margin-top: 140px;
+    }
+}
+
+@media (max-width: 575px) {
+    .container {
+        max-width: 300px;
+    }
+
+    .header__menu {
+        width: 100%;
+    }
+
+    .header__title {
+        font-size: 30px;
+        line-height: 60px
+    }
+
+    .header__desc {
+        font-size: 15px;
+    }
+
+    .button-buy-game {
+        padding: 20px 90px;
+        font-size: 16px;
+    }
+
+    .header {
+        padding-bottom: 623px;
+    }
+
+    .about-the-game__title {
+        font-size: 36px;
+        line-height: 60px;
+    }
+
+    .about-the-game {
+        padding: 20px 0;
+    }
+
+    .about-the-game__features-list-item {
+        font-size: 16px;
+    }
+
+    .about-the-game__video-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .game-video-btn {
+        font-size: 9px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .about-the-game__play-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .game-video-btn {
+        bottom: -69px;
+        right: 14px;
+    }
+
+    .about-the-game__button-buy-game {
+        top: 816px;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .statistics__text-title {
+        font-size: 36px;
+    }
+
+    .statistics__text-desc {
+        font-size: 12px;
+    }
+
+    .car-photo-card {
+        height: 380px;
+        width: 297px;
+    }
+
+    .car-photo-card__image {
+        height: 243px;
+        width: 245px;
+    }
+
+    .car-photo-card__info {
+        width: 240px;
+    }
+
+    .footer {
+        padding: 100px 0;
+    }
+
+    .footer__link {
+        font-size: 14px;
+    }
+
+    .footer__desc {
+        font-size: 11px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .statistics__text-title {
+        font-size: 28px;
+    }
+
+    .statistics__text-desc {
+        font-size: 10px;
+    }
+
+    .partner__image {
+        width: 85px;
+        height: 85px;
+    }
+
+    .partner__name {
+        font-size: 12px;
+    }
+
+    .road-map__bg {
+        top: 395px;
+        left: -203px;
+        height: 180px;
+        width: 482px;
+    }
+
+    .road-map__stage-number {
+        font-size: 22px;
+    }
+
+    .road-map__stage-name {
+        font-size: 18px;
+    }
+
+    .road-map__desc {
+        font-size: 12px;
+    }
+
+    .road-map__stage {
+        max-width: 170px;
+    }
+
+    .road-map__stage--1 {
+        top: 164px;
+        left: 85px;
+    }
+
+    .road-map__stage--2 {
+        left: 129px;
+        top: 286px;
+    }
+
+    .road-map__stage--3 {
+        left: 159px;
+        top: 426px;
+    }
+
+    .road-map__stage--4 {
+        left: 129px;
+        top: 572px;
+    }
+
+    .road-map__stage--5 {
+        top: 695px;
+        left: 85px;
+    }
+
+    .road-map__button-buy-game {
+        top: 812px;
+    }
+
+    .road-map {
+        padding-bottom: 1062px;
+    }
+
+    .roadmap__section-title {
+        top: 2px;
+    }
+
+    .partners__bg {
+        padding: 60px 0;
+    }
+
+    .header__menu-list-item .header__link {
+        padding: 20px 110px;
+    }
+
+    .statistics__bg {
+        left: -117px;
+        top: 279px;
+        transform: scale(1.8);
+    }
+
+    .statistics-info__image--lamp {
+        height: 55px;
+        width: 30px;
+    }
+
+    .statistics-info__image--target {
+        width: 54px;
+        height: 38px;
+    }
+
+    .statistics-info__image--man {
+        height: 59px;
+        width: 35px;
+    }
+
+    .statistics-info__text-percents {
+        font-size: 24px;
+    }
+
+    .statistics-info__text-desc {
+        font-size: 10px;
+    }
+
+    .statistics-info__image {
+        margin-right: 15px;
+    }
+
+    .statistics-info--community {
+        top: 241px;
+        left: 98px;
+    }
+
+    .statistics-info--marketing {
+        top: 336px;
+        right: 46px;
+    }
+
+    .statistics-info--team {
+        top: 443px;
+        left: 98px;
+    }
+
+    .statistics {
+        padding-bottom: 373px;
+    }
+
+    .partners {
+        padding-top: 80px;
+        padding-bottom: 60px;
+    }
+
+    .video__wrapper {
+        margin-top: 170px;
+    }
+
+    .cars-photo-slider {
+        height: 520px !important;
+    }
+}
+
+
+
+
+
+
